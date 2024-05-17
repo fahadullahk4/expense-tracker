@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Expense Tracker</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet" />
+	</head>
+	<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+		<div class="w-full max-w-lg bg-white p-6 rounded-lg shadow-md">
+			<h2 class="text-2xl font-bold mb-4">Expense Tracker</h2>
+			<div class="mb-4">
+				<input
+					type="text"
+					class="name-input w-full p-2 border rounded mb-2"
+					placeholder="Item Name" />
+				<input
+					type="number"
+					class="price-input w-full p-2 border rounded"
+					placeholder="Item Price" />
+			</div>
+			<div class="flex justify-between mb-4">
+				<button
+					class="submit bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700">
+					Submit
+				</button>
+				<button
+					class="reset bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700">
+					Reset
+				</button>
+			</div>
+			<table class="total-list w-full mt-4 border-collapse">
+				<thead>
+					<tr class="bg-gray-200">
+						<th class="border p-2 text-left">Item</th>
+						<th class="border p-2 text-left">Price</th>
+						<th class="border p-2"></th>
+					</tr>
+				</thead>
+				<tbody class="bg-white"></tbody>
+			</table>
+			<div class="mt-4">
+				<p class="total-price text-xl font-bold">Total: $0.00</p>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
